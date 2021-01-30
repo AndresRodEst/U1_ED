@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <math.h>
 int main(){
-	//Andrés Rodriguez Estrada. 
-	//Estructura de Datos. Actividad 1. Ejercicio 1. Tamaño de muestra.
+	//Andrï¿½s Rodriguez Estrada. 
+	//Estructura de Datos. Actividad 1. Ejercicio 1. Tamaï¿½o de muestra.
 	//26 de Enero de 2021
 	
 	//Defino las variables a utilizar y las inicializo para evitar problemas de valores
@@ -15,18 +16,18 @@ int main(){
 	  int nivelConfianza=0;
 	 
 	 //Imprimo por pantalla un mensaje de Bienvenida y explicacion del funcionamiento del programa
-	 printf("Este programa calcula el tamaño de una muestra dada una poblacion.\n");
+	 printf("Este programa calcula el tamaï¿½o de una muestra dada una poblacion.\n");
 	 
-	 //Solicito se ingrese el tamaño de la poblacion
-	 printf("\nPor favor, ingrese el tamaño de la poblacion: ");
-	 //Leo el tamaño de la poblacion 
+	 //Solicito se ingrese el tamaï¿½o de la poblacion
+	 printf("\nPor favor, ingrese el tamaï¿½o de la poblacion: ");
+	 //Leo el tamaï¿½o de la poblacion 
 	 scanf("%f", &poblacion);
 	 //Solicito el porcentaje de confianza
 	 printf("\nPor favor, el porcentaje de confianza: ");
 	 //Leo el nivel de confianza. Es importante destacar que estoy utilizando un entero para poder dar uso a un Switch
 	 scanf("%d", &nivelConfianza);	 
 	 
-	 //Creo un switch que definirá el valor estadistico del nivel de confianza, en base al porcentaje dado, con 3 opciones:
+	 //Creo un switch que definirï¿½ el valor estadistico del nivel de confianza, en base al porcentaje dado, con 3 opciones:
 	 
 	 switch(nivelConfianza){
 	 
@@ -64,13 +65,13 @@ int main(){
 	 
 	 //Muestro los datos generales de la operacion.
 	 printf("\nValores: \nTam poblacion: %.2f. \nPorcentaje confianza: %.2f. \nPorcentaje error: %.2f. \nValor p: %.2f, \nValor q: %.2f.",poblacion,confianza,error,p,q);	 
-	 printf("\nCalculando tamaño de muestra. Espere\n....\n.....");
+	 printf("\nCalculando tamaï¿½o de muestra. Espere\n....\n.....");
 	 
 	 //Realizo el calculo de la muestra
 	 tamMuestra = ((confianza*confianza)*p*q*poblacion)/(((error*error)*(poblacion-1))+((confianza*confianza)*p*q));
 	 //Muestro el resultado correspondiente utilizando la funcion floor que redondea hacia abajo el resultado
 	 //Considernado que la logica indica que la muestra debe ser un numero entero
-	 printf("\nEl tamaño ideal de la muestra es de: %.2f", floor(tamMuestra));
+	 printf("\nEl tamaï¿½o ideal de la muestra es de: %.2f", floor(tamMuestra));
 	 
 	
 }
