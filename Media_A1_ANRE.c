@@ -2,6 +2,10 @@
 #include <math.h>
 int main()
 {
+    //Andrés Rodriguez Estrada. Matricula ES1921017240
+    //Estructura de Datos. Cuarto semestre. Bloque 1.
+    //Profesor Julio Cesar Paz Carreño
+    //Calculo de medidas de tendencia central y de dispersion.
 
     //
     //Solicitud de tamaño de arreglo y creacion del arreglo

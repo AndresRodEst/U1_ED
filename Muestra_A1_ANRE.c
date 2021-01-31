@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <math.h>
 int main(){
-	//Andr�s Rodriguez Estrada. 
-	//Estructura de Datos. Actividad 1. Ejercicio 1. Tama�o de muestra.
-	//26 de Enero de 2021
+	//Andrés Rodriguez Estrada. Matricula ES1921017240
+	//Estructura de Datos. Cuarto semestre. Bloque 1.
+	//Profesor Julio Cesar Paz Carreño
+	//Tamaño de muestra
 	
 	//Defino las variables a utilizar y las inicializo para evitar problemas de valores
 	
