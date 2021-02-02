@@ -94,7 +94,7 @@ int main(){
 
              
                 
-                 //Una vez verificado que el numero sea correcto, lo agrego a la pila
+                 
                  //inicialmente verifico que la pila no este llena.
                  if(pila[tam-1]==0){
 
@@ -132,17 +132,68 @@ int main(){
 
                      }
 
-                 }else{
+                 }else
+                 //Si la pila esta llena, envio un mensaje informandolo
+                 {
                      printf("\nLo sentimos, la pila esta llena. No es posible agregar mas elementos.");
                  }
 
                 //Por ultimo imprimo la pila
+                printf("\nValores contenidos en la pila: ");
                 for(int i=0;i<tam;i++){
                     printf("\n%d",pila[i]);
                 }
                 break;
 
             case 4:
+
+                //Considerando que se trata de una pila, siempre saldrá el elemento de la posicion 0 de la pila
+                //Y todos los que esten debajo de el se recorrerán una posicion hacia arriba.
+                //Antes de sacar un elemento, verifico que la pila no este vacia.
+                if (pila[0] != 0)
+                {
+
+                    //Inicialmente muestro el elemento que ha salido de la pila:
+                    printf("\nEl elemento que ha salido de la pila es: %d", pila[0]);
+
+                    //Despues recorro los valores. Es importante destacar que cada que un elemento sale,
+                    //Forzozamente debe agregarse un valor nulo(0 en este caso) al final de la pila, para no tener errores
+
+                    for (int i = 0; i < tam; i++)
+                    {
+
+                        if (i != tam - 1)
+                        {
+                            pila[i] = pila[i + 1];
+                        } //Fin if
+                        else
+                        {
+                            //En el ultimo elemento del array agrego un 0.
+                            //Siempre en este indice, pues teoricamente es el que queda libre
+                            pila[i] = 0;
+                        }
+                    } //Fin for para reacomodar
+
+                    //Muestro nuevamente los valores de mi pila
+                    printf("\nValores contenidos en la pila: ");
+                    for (int i = 0; i < tam; i++)
+                    {
+                        printf("\n%d", pila[i]);
+                    }
+                }//Fin if comprobacion valores de pila
+                else
+                {
+
+                    printf("\nLa pila esta vacia, no es posible sacar un elemento de ella.");
+
+                    //Muestro nuevamente los valores de mi pila
+                    printf("\nValores contenidos en la pila: ");
+                    for (int i = 0; i < tam; i++)
+                    {
+                        printf("\n%d", pila[i]);
+                    }
+                }//Fin else comprobacion valores de pila
+
                 break;
 
             case 5:
